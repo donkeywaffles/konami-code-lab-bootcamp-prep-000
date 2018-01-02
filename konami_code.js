@@ -6,7 +6,6 @@ function init() {
   body.addEventListener('keydown', function(e) {
     const key = parseInt(e.detail || e.which);
     if (key === code[index]) {
-      console.log(key);
       index++;
       if (index === code.length) {
         alert('Konami CODE!');
@@ -15,7 +14,6 @@ function init() {
     } else {
       index = 0;
     }
-
   });
 }
 
