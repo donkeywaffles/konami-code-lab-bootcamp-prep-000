@@ -1,17 +1,16 @@
 const code = [38, 38, 40, 40, 37, 39, 37, 39, 66, 65]
-
+let index = 0;
 function init() {
-  let index = 0;
-  document.body.addEventListener('keydown', function konami(e) {
+  document.body.addEventListener('keydown', function(e) {
     const key = e.detail || e.which;
     if (key === code[index]) {
-        index++;
-      if (index === alphabet.length) {
-        alert('Congratulations! You entered the Konami code');
-        index = 0;
-      } else {
+      index++;
+      if (index === code.length) {
+        alert('Konami CODE!');
         index = 0;
       }
+    } else {
+      index = 0;
     }
   });
 }
