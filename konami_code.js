@@ -5,7 +5,7 @@ function init() {
     const key = e.detail || e.which;
     if (key === code[index]) {
       index++;
-      if (index === code.length) {
+      if (index === code.length - 1) {
         alert('Konami CODE!');
         index = 0;
       }
